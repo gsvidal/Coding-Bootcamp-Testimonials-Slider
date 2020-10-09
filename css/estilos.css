@@ -1,0 +1,158 @@
+/* Style-guide:
+ - Mobile: 375px
+- Desktop: 1440px 
+
+### Body Copy
+
+- Font size: 32px
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 300, 500, 700 */
+
+:root {
+--dark-blue: hsl(240, 37%, 20%);
+--grayish-blue: hsl(240, 18%, 77%);
+--red-sino: #a72222;
+} 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.7rem;
+  font-family: 'Inter', sans-serif;
+  color: hsl(240, 37%, 20%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Las 2 siguientes lineas distribuyen el contenido verticalmente y con responsiveness */
+  justify-content: center;
+  height: 100vh;
+
+  min-height: 650px;
+  min-width: 375px;
+
+  background-image: url('../images/pattern-curve.svg');
+  background-size: 300px ;
+  background-repeat: no-repeat;
+  background-position: left bottom; 
+}
+
+.image-container {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  background-image: url('../images/pattern-bg.svg');
+  text-align: center;
+  background-size: 85% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.image-container img {
+  width: 80%;
+  padding: 30px;
+
+}
+.testimonial-container {
+  text-align: center;
+  padding: 30px 37px;
+  margin-top: 20px;
+  max-width: 600px;
+  background-image: url('../images/pattern-quotes.svg');
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: top center;  
+  
+}
+.testimonial {
+  font-weight: 300;
+  color: var(--dark-blue);
+}
+.personal-info {
+  padding: 20px;
+}
+
+.name {
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 5px;
+}
+.career {
+  font-size: 1.2rem;
+  color: var(--grayish-blue);
+  font-weight: 300;
+}
+
+@media screen and (min-width: 375px) {
+
+  body {
+    min-height: 800px;
+    
+  }
+
+
+  
+}
+
+@media screen and (min-width: 1270px) {
+
+body {
+  flex-direction: row-reverse;
+  /* justify-content: center; */
+  min-height: 850px;
+  background-size:500px ;
+}
+
+.image-container {
+  position: relative;
+  left: -100px;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 95%;
+
+}
+.image-container img {
+  width: 80%;
+
+}
+
+.testimonial-container {
+  position: relative;
+  left: 100px;
+  padding-top: 50px;
+  padding-bottom: 0;
+  margin: 0;
+  max-width: 700px;
+  background-position: left 145px top ;
+  background-size: 100px;
+}
+.testimonial {
+  font-size: 3.2rem;
+  text-align: left;
+}
+.personal-info {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  padding-top: 30px;
+}
+.name {
+  font-size: 2rem;
+  padding-left: 0;
+
+}
+.career {
+  font-size: 2rem;
+}
+
+}
