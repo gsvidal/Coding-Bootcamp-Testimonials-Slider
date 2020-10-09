@@ -12,7 +12,7 @@
 :root {
 --dark-blue: hsl(240, 37%, 20%);
 --grayish-blue: hsl(240, 18%, 77%);
---red-sino: #a72222;
+
 } 
 
 * {
@@ -44,7 +44,17 @@ body {
   background-position: left bottom; 
   position:relative;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  justify-content: center;
+  height: 100vh;
+
+  min-height: 650px;
+  min-width: 375px;
+}
 .image-container {
   /* position: absolute;
   top: 0;
@@ -54,13 +64,49 @@ body {
   background-size: 85% 100%;
   background-repeat: no-repeat;
   background-position: center;
-
+  position: relative;
 }
-.image-container img {
+.image-container .participant {
   width: 80%;
   padding: 30px;
+  /* box-shadow: 5px 10px 5px  hsl(240, 37%, 20%, 0.3);  */
+}
+.image-container .buttons { 
+  position: absolute;
+  bottom: 10px;
+  left: 42%; 
+  width: 19%;
+  height: 12%; 
+  display: flex;
+  align-items: center;
+}
+.button {  
+  background-color: white;
+  border: 1px solid white;
+  width: 100%;
+  height: 100%;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 10px 5px  hsl(240, 37%, 20%, 0.3); 
+}
+#button-prev {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%; 
+  cursor: pointer;
+}
+#button-next {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%; 
+  cursor: pointer;
 
 }
+.button img {
+  width: 8px;
+  height: 12px;
+}
+
 .testimonial-container {
   text-align: center;
   padding: 30px 37px;
@@ -70,7 +116,6 @@ body {
   background-size: 50px;
   background-repeat: no-repeat;
   background-position: top center;  
-  
 }
 .testimonial {
   font-weight: 300;
@@ -90,6 +135,16 @@ body {
   color: var(--grayish-blue);
   font-weight: 300;
 }
+.container.tipo1.is-not-active {
+  display: none;
+
+}
+
+.container.tipo2.is-not-active {
+  display: none;
+
+}
+
 footer {
   position: absolute;
   bottom: 20px;
@@ -101,14 +156,28 @@ a {
 
 @media screen and (min-width: 375px) {
 
-  body {
-    min-height: 800px;
+body {
+  min-height: 800px;
 }
-
+.container {
+  min-height: 800px;
+}
   
 }
 
-@media screen and (min-width: 1270px) {
+@media screen and (min-width: 600px) {
+
+.testimonial-container {
+  max-width: 800px;
+}
+
+.testimonial {
+  font-size: 2.2rem;
+}
+
+}
+
+@media screen and (min-width: 1440px) {
 
 body {
   flex-direction: row-reverse;
@@ -117,25 +186,37 @@ body {
   background-size:500px ;
   
 }
+.container {
+  flex-direction: row-reverse;
+  min-height: 850px;
+  background-size:500px ;
+  
+}
 
 .image-container {
-  position: relative;
-  left: -100px;
-  width: 800px;
-  height: 800px;
+  left: -150px;
+  width: 740px;
+  height: 740px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: 95%;
-
+  position: relative;
 }
-.image-container img {
+.image-container .participant {
   width: 80%;
+}
+.image-container .buttons { 
+  position: absolute;
+  top: 610px;
+  left: 190px; 
+  width: 90px;
+  height: 45px; 
 }
 
 .testimonial-container {
   position: relative;
-  left: 100px;
+  left: 80px;
   padding-top: 50px;
   padding-bottom: 0;
   margin: 0;
