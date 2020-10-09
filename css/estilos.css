@@ -100,8 +100,18 @@ body {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%; 
   cursor: pointer;
-
 }
+#button-prev2 {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%; 
+  cursor: pointer;
+}
+#button-next2 {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%; 
+  cursor: pointer;
+}
+
 .button img {
   width: 8px;
   height: 12px;
@@ -135,12 +145,12 @@ body {
   color: var(--grayish-blue);
   font-weight: 300;
 }
-.container.tipo1.is-not-active {
+#tipo1.is-not-active {
   display: none;
 
 }
 
-.container.tipo2.is-not-active {
+#tipo2.is-not-active {
   display: none;
 
 }
@@ -172,7 +182,7 @@ body {
 }
 
 .testimonial {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 
 }
