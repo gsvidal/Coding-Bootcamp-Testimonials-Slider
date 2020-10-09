@@ -1,4 +1,4 @@
-# Escuela de Desarrollo Web by Platzi - Coding Bootcamp Testimonials Slider
+# Escuela de Desarrollo Web by Platzi - [Coding Bootcamp Testimonials Slider](https://gsvidal.github.io/Coding-Bootcamp-Testimonials-Slider/)
 
 ![Design preview for the Coding Bootcamp Testimonials Slider coding challenge](./design/desktop-preview.jpg)
 
